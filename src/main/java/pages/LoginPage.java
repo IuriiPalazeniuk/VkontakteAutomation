@@ -1,24 +1,28 @@
 package pages;
 
-import data.UserData;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import data.UserData;
 
 /**
  * Created by Maksym_Mazurkevych on 2/24/2016.
  */
 public class LoginPage extends Page {
 
-    @FindBy(id = "quick_email")
+    @FindBy(id = "index_email")
     private WebElement mailFld;
 
-    @FindBy(id = "quick_pass")
+    @FindBy(id = "index_pass")
     private WebElement passFld;
 
-    @FindBy(id = "quick_login_button")
+    @FindBy(id = "index_login_button")
     public WebElement linkSignIn;
+
+    @FindBy(id = "quick_forgot")
+    public WebElement linkForgot;
 
     public LoginPage(WebDriver driver) {
         super(driver);
@@ -38,7 +42,7 @@ public class LoginPage extends Page {
 
 
     public boolean isLoggedOut() {
-        if (isElementPresent(linkSignIn)){
+        if (isElementPresent(linkForgot)){
             return true;
         }
         else {

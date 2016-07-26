@@ -12,7 +12,7 @@ public class LoginTest extends BasicTestCase {
 
     private LoginPage loginPage = PageFactory.initElements(getWebDriver(), LoginPage.class);
     private HomePage homepage;
-    private String baseUrl = "http://vk.com/";
+    private String baseUrl = "https://vk.com/";
 
     @Test
     public void testLogin() throws Exception {
@@ -23,7 +23,6 @@ public class LoginTest extends BasicTestCase {
         Assert.assertEquals(baseUrl + "feed", driver.getCurrentUrl());
         LoginPage loginpage = homepage.logOut();
         Assert.assertTrue(loginpage.isLoggedOut());
-        Assert.assertTrue(driver.getCurrentUrl().contains(baseUrl));
 
     }
 

@@ -1,9 +1,10 @@
-import data.UserData;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.AfterTest;
 
 import java.util.concurrent.TimeUnit;
+
+import data.UserData;
 
 /**
  * Created by Maksym_Mazurkevych on 2/24/2016.
